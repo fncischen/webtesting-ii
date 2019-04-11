@@ -19,12 +19,12 @@ describe('<App/>', () => {
 
   it('check balls', () => {
     const { getByText } = render(<Display/>)
-    // const balls = getByText('balls')
+    const balls = getByText('balls')
   })
 
   it('check strikes', () => {
     const { getByText } = render(<Display/>)
-    // const balls = getByText('strikes')
+    const balls = getByText('strikes')
   })
 
 });
