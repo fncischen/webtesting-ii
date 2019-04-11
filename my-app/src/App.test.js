@@ -6,6 +6,7 @@ import Display from "./Components/Display.js";
 import { render, cleanup, fireEvent } from 'react-testing-library';
 
 import 'jest-dom/extend-expect';
+import Dashboard from './Components/Dashboard';
 
 afterEach(cleanup);
 
@@ -19,6 +20,7 @@ describe('<App/>', () => {
 
   it('check balls', () => {
     const { getByText } = render(<Display balls="0"/>)
+    console.log(getByText);
     const balls = getByText('0')
   })
 
@@ -26,5 +28,10 @@ describe('<App/>', () => {
     const { getByText } = render(<Display strikes="0"/>)
     const strikes = getByText('0')
   })
+
+  it("checked for fired event", () => {
+    const { container } = render(<Dashboard/>)
+    fireEvent.click(container);
+  });
 
 });
