@@ -18,13 +18,13 @@ describe('<App/>', () => {
   
 
   it('check balls', () => {
-    const { getByText } = render(<Display/>)
-    const balls = getByText('balls')
+    const { getByText } = render(<Display balls="0"/>)
+    const balls = getByText('0')
   })
 
   it('check strikes', () => {
-    const { getByText } = render(<Display/>)
-    const balls = getByText('strikes')
+    const { getByText } = render(<Display strikes="0"/>)
+    const strikes = getByText('0')
   })
 
 });
